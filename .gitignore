@@ -1,11 +1,13 @@
-.DS_Store
-.Rproj.user
-.Rproj
-.Rhistory
-.RData
-.Ruserdata
-.aux
-.log
-.PDF
-.gz
+*.DS_Store
+*.Rproj.user
+*.Rproj
+*.Rhistory
+*.RData
+*.Ruserdata
+*.aux
+*.log
+*.PDF
+*.pdf
+*.gz
+data/
 
