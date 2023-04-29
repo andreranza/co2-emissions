@@ -2,7 +2,8 @@ library(tidyverse)
 
 # Country names -----------------------------------------------------------
 eu_countries <- read_lines("data/eu-countries.txt")
-codes <- str_subset(eu_countries, pattern = "\\([^()]+\\)")
+codes <- str_subset(eu_countries, pattern = "(?<=\\()[^()]+(?=\\))") |>
+  str_remove_all("[()]")
 countries <- str_subset(eu_countries, pattern = "\\(", negate = TRUE)
 eu_df <- tibble(country_name = countries, country_code = codes)
 
